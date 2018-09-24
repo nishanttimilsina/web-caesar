@@ -10,7 +10,7 @@ def rotate_character(char, rot):
     return char
 
 def main():
-    print(encrypt('The crow', 'boom'))
+    print(rotate_character('The crow', 'boom'))
 
 if __name__ == "__main__":
     main()

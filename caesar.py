@@ -1,4 +1,4 @@
-from helpers import alphabet_position, rotate_character
+from helpers import rotate_character
 
 def encrypt(text, rot):
     return_string = ""
