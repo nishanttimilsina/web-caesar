@@ -1,7 +1,7 @@
 # [START app]
 
 from flask import Flask, request
-from helpers import rotate_character
+from caesar import rotate_character
 
 
 app = Flask(__name__)

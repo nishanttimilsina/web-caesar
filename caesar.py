@@ -1,16 +1,16 @@
-from helpers import rotate_character
+def alphabet_position(letter):
+    return (ord(letter.upper()) - 65)
 
-def encrypt(text, rot):
-    return_string = ""
-
-    for x in text:
-        return_string = return_string + rotate_character(x, rot)
-
-    return return_string
+def rotate_character(char, rot):
+    if char.isalpha():
+        if char.isupper():
+            char = chr(65 + ((alphabet_position(char) + rot) % 26))
+        else:
+            char = chr(97 + ((alphabet_position(char) + rot) % 26))
+    return char
 
 def main():
-
-    print(encrypt('Hello, World!', 5))
+    print(rotate_character('The crow', 'boom'))
 
 if __name__ == "__main__":
     main()
